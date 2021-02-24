@@ -9,8 +9,9 @@ RUN apt-get update \
     gcc \
     build-essential \
     && apt-get upgrade -y \
-    && apt-get clean \
-    && pip install --upgrade pip \
+    && apt-get clean
+   
+RUN pip install --upgrade pip \
     && pip install --no-cache-dir \
     autopep8 \
     flake8 \
